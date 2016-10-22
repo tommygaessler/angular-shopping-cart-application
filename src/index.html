@@ -14,6 +14,16 @@
         <li><a href="#!" ng-model="sort" ng-click="sort='price'">Low</a></li>
         <li><a href="#!" ng-model="sort" ng-click="sort='-price'">High</a></li>
       </ul>
+      <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#!" ng-model="sort" ng-click="sort='price'">Low</a></li>
+        <li><a href="#!" ng-model="sort" ng-click="sort='-price'">High</a></li>
+      </ul>
+      <ul id="dropdown3" class="dropdown-content">
+        <li><a href="#!" ng-repeat="category in categories">{{ category }}</a></li>
+      </ul>
+      <ul id="dropdown4" class="dropdown-content">
+        <li><a href="#!" ng-repeat="category in categories">{{ category }}</a></li>
+      </ul>
       <div class="navbar-fixed">
         <nav>
           <div class="nav-wrapper">
@@ -29,8 +39,10 @@
                   </div>
                 </form>
               </li>
-              <!-- fix this -->
-              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Sort By Price<i class="material-icons right">arrow_drop_down</i></a></li>
+
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown4">Sort by Category<i class="material-icons right">arrow_drop_down</i></a></li>
+
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Sort By Price<i class="material-icons right">arrow_drop_down</i></a></li>
               <li><a href="#">Cart</a></li>
             </ul>
             <ul class="right hide-on-med-and-down">
@@ -43,6 +55,9 @@
                   </div>
                 </form>
               </li>
+
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Sort by Category<i class="material-icons right">arrow_drop_down</i></a></li>
+
               <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Sort By Price<i class="material-icons right">arrow_drop_down</i></a></li>
               <li><a href="#">Cart</a></li>
             </ul>
@@ -66,7 +81,12 @@
                   <p>Price: {{ tea.price/100 | currency }}</p>
                   <p>In stock: {{ tea.inStock }}</p>
                   <p>Rating: {{ tea.rating }}</p>
-                  <p>Categories: {{ tea.categories }}</p>
+                  <div>
+                    <p>Categories:</p>
+                    <div class="chip" ng-repeat="catagory in tea.categories">
+                      {{ catagory }}
+                    </div>
+                  </div>
                 </div>
                 <div class="card-action">
                   <a href="#">This is a link</a>
