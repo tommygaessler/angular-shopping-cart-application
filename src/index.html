@@ -2,25 +2,92 @@
 <html lang="en" ng-app="teaApp">
   <head>
     <meta charset="utf-8">
-    <title>Untitled</title>
+    <title>Angular Tea Shop</title>
     <!-- styles -->
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body ng-cloak>
-    <!-- sample angular code -->
-    <div class="container">
-      <div ng-controller="shopController as shopCtrl">
-        <p>{{ shopCtrl.greeting }}</p>
+    <header>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!" ng-model="sort" ng-click="sort='price'">Low</a></li>
+        <li><a href="#!" ng-model="sort" ng-click="sort='-price'">High</a></li>
+      </ul>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="side-nav" id="mobile-demo">
+              <li>
+                <form>
+                  <div class="input-field">
+                    <input id="search" type="search" ng-model="search">
+                    <label for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                  </div>
+                </form>
+              </li>
+              <!-- fix this -->
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Sort By Price<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a href="#">Cart</a></li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <form>
+                  <div class="input-field">
+                    <input id="search" type="search" ng-model="search">
+                    <label for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                  </div>
+                </form>
+              </li>
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Sort By Price<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a href="#">Cart</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </div>
+    </header>
+    <main>
+      <div class="container">
+        <div ng-controller="shopController as shopCtrl">
+          <div class="row">
+            <div ng-repeat="tea in shopCtrl.shop | orderBy:sort | filter:search" class="col l4 m6 s12">
+              <div class="card">
+                <div class="card-image">
+                  <img ng-src="{{ tea.imageUrl }}">
+                  <span class="blue-text card-title">{{ tea.name }}</span>
+                </div>
+                <div class="card-content">
+                  <p>Ingredients: {{ tea.ingredients }}</p>
+                  <p>Caffeine Scale: {{ tea.caffeineScale }}</p>
+                  <p>Price: {{ tea.price/100 | currency }}</p>
+                  <p>In stock: {{ tea.inStock }}</p>
+                  <p>Rating: {{ tea.rating }}</p>
+                  <p>Categories: {{ tea.categories }}</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- scripts -->
     <script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+
+    <!-- Your app -->
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/config.js"></script>
     <!-- main component -->
     <script type="text/javascript" src="js/components/shop/shop.controller.js"></script>
+    <script type="text/javascript" src="js/components/shop/shop.service.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

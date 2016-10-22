@@ -6,11 +6,11 @@
     .module('teaApp.components.shop', [])
     .controller('shopController', shopController);
 
-  shopController.$inject = ['$scope'];
+  shopController.$inject = ['ShopService'];
 
-  function shopController($scope) {
-    /*jshint validthis: true */
-    this.greeting = 'Hello World!';
+  function shopController(ShopService) {
+    /* jshint validthis: true */
+    this.shop = ShopService.shop();
   }
 
 })();

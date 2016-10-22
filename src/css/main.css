@@ -1,1 +1,8 @@
 /* add custom styles */
+form {
+  height: 64px !important;
+}
+
+.side-nav .material-icons {
+  color: #ee6e73;
+}
