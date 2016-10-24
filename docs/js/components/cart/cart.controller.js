@@ -17,7 +17,7 @@
 
     var total = 0;
 
-    if ($rootScope.cart.length) {
+    if ($rootScope.cart && $rootScope.cart.length) {
       $rootScope.cart.forEach(function(tea) {
         total += tea.price;
       });
