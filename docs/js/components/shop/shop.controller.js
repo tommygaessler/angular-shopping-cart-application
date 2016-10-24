@@ -47,7 +47,7 @@
         $rootScope.incart += parseInt(quantity);
         $rootScope.cart.push({ quantity:parseInt(quantity), price:price, tea:tea });
       }
-    }
+    };
 
     this.shop = ShopService.shop();
     var categories = [];
