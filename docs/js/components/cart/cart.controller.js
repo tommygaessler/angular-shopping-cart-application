@@ -25,5 +25,4 @@
 
     this.total = total;
   }
-
 })();

@@ -9,12 +9,12 @@
   function appConfig($routeProvider) {
     $routeProvider
     .when('/', {
-      templateUrl: '/js/components/shop/shop.view.html',
+      templateUrl: './js/components/shop/shop.view.html',
       controller: 'shopController',
       controllerAs: 'shopCtrl'
     })
     .when('/cart', {
-      templateUrl: '/js/components/cart/cart.view.html',
+      templateUrl: './js/components/cart/cart.view.html',
       controller: 'cartController',
       controllerAs: 'cartCtrl'
     })
