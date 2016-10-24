@@ -21,7 +21,7 @@
           price: 1540,
           inStock: true,
           rating: 1,
-          imageUrl: 'http://s7d5.scene7.com/is/image/Teavana/32664_d?$cimg$',
+          imageUrl: 'https://s7d5.scene7.com/is/image/Teavana/32664_d?$cimg$',
           __v: 0,
           categories: ['dark', 'cold']
         },
@@ -33,7 +33,7 @@
           price: 7348,
           inStock: true,
           rating: 2,
-          imageUrl: 'http://s7d5.scene7.com/is/image/Teavana/32303_d?$cimg$',
+          imageUrl: 'https://s7d5.scene7.com/is/image/Teavana/32303_d?$cimg$',
           __v: 0,
           categories: ['awesome']
         },
@@ -45,7 +45,7 @@
           price: 4991,
           inStock: true,
           rating: 4,
-          imageUrl: 'http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$',
+          imageUrl: 'https://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$',
           __v: 0,
           categories: ['cold']
         },
@@ -57,7 +57,7 @@
           price: 5496,
           inStock: true,
           rating: 1,
-          imageUrl: 'http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$',
+          imageUrl: 'https://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$',
           __v: 0,
           categories: ['dry', 'hot', 'awesome']
         },
@@ -69,7 +69,7 @@
           price: 2445,
           inStock: true,
           rating: 1,
-          imageUrl: 'http://s7d5.scene7.com/is/image/Teavana/32621_d?$cimg$',
+          imageUrl: 'https://s7d5.scene7.com/is/image/Teavana/32621_d?$cimg$',
           __v: 0,
           categories: ['summer']
         },
@@ -81,7 +81,7 @@
           price: 4486,
           inStock: true,
           rating: 3,
-          imageUrl: 'http://s7d5.scene7.com/is/image/Teavana/31359_d?$cimg$',
+          imageUrl: 'https://s7d5.scene7.com/is/image/Teavana/31359_d?$cimg$',
           __v: 0,
           categories: ['dry','lucid','warm']
         },
@@ -93,7 +93,7 @@
           price: 6973,
           inStock: true,
           rating: 3,
-          imageUrl: 'http://s7d5.scene7.com/is/image/Teavana/32303_d?$cimg$',
+          imageUrl: 'https://s7d5.scene7.com/is/image/Teavana/32303_d?$cimg$',
           __v: 0,
           categories: ['summer']
         },
@@ -105,7 +105,7 @@
           price: 6003,
           inStock: true,
           rating: 2,
-          imageUrl: 'http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$',
+          imageUrl: 'https://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$',
           __v: 0,
           categories: ['dry','winter','lucid']
         },
@@ -117,7 +117,7 @@
           price: 1374,
           inStock: true,
           rating: 3,
-          imageUrl: 'http://s7d5.scene7.com/is/image/Teavana/32174_d?$cimg$',
+          imageUrl: 'https://s7d5.scene7.com/is/image/Teavana/32174_d?$cimg$',
           __v: 0,
           categories: ['lucid','hot']
         },
@@ -129,7 +129,7 @@
           price: 4158,
           inStock: true,
           rating: 2,
-          imageUrl: 'http://s7d5.scene7.com/is/image/Teavana/32621_d?$cimg$',
+          imageUrl: 'https://s7d5.scene7.com/is/image/Teavana/32621_d?$cimg$',
           __v: 0,
           categories: ['spring', 'warm','winter']
         }
