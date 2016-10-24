@@ -1,0 +1,22 @@
+<h4 class="cart">Total: {{ cartCtrl.total | currency }}</h4>
+<button class="waves-effect waves-light btn buy-now right">Place Order</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tea</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr ng-repeat="tea in cart">
+      <td>{{ tea.tea.name }}</td>
+      <td><span>-</span> {{ tea.quantity }} <span>+</span></td>
+      <td>{{ tea.price | currency }}</td>
+      <td><i class="material-icons" ng-click="delete(tea)">delete</i></td>
+    </tr>
+  </tbody>
+</table>

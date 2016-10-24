@@ -1,7 +1,9 @@
 (function() {
+
   'use strict';
 
-  angular.module('teaApp.components.shop')
+  angular
+  .module('teaApp.components.shop')
   .service('ShopService', ShopService);
 
   ShopService.$inject = [];

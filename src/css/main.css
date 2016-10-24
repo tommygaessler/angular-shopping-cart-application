@@ -6,3 +6,23 @@ form {
 .side-nav .material-icons {
   color: #ee6e73;
 }
+
+.large {
+  height: 630px !important;
+}
+
+.button-collapse {
+  cursor: pointer;
+}
+
+.btn:not(.buy-now) {
+  width: 100%;
+}
+
+.cart {
+  display: inline-block;
+}
+
+.buy-now {
+  margin-top: 16.53px;
+}

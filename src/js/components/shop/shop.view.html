@@ -1,0 +1,33 @@
+<div class="row">
+  <div ng-repeat="tea in shopCtrl.shop | orderBy:sortByPrice | filter:search" class="col l4 m6 s12">
+    <div class="card large">
+      <div class="card-image">
+        <img ng-src="{{ tea.imageUrl }}">
+        <span class="blue-text card-title">{{ tea.name }}</span>
+      </div>
+      <div class="card-content">
+        <p>Ingredients: {{ tea.ingredients }}</p>
+        <p>Caffeine Scale: {{ tea.caffeineScale }}</p>
+        <p>Price: {{ tea.price/100 | currency }}</p>
+        <p>In stock: {{ tea.inStock }}</p>
+        <p>Rating: {{ tea.rating }}</p>
+        <p>Categories:</p>
+        <div class="chip" ng-repeat="catagory in tea.categories">
+          {{ catagory }}
+        </div>
+      </div>
+      <div class="card-action">
+        <div class="row">
+          <form name="form" ng-submit="shopCtrl.add(quantity, tea)">
+            <select class="browser-default" name="quantity" ng-model="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button type="submit" class="waves-effect waves-light btn"><i class="material-icons left">shopping_cart</i>Add to Cart</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

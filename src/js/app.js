@@ -6,8 +6,10 @@
 
   angular
     .module('teaApp', [
+      'ngRoute',
       'teaApp.config',
-      'teaApp.components.shop'
+      'teaApp.components.shop',
+      'teaApp.components.cart'
     ]);
 
 })();
